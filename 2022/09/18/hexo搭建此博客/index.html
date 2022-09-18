@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://niaoshi119.github.io">
-  <title>Archives: 2022/9 | paste convergence</title>
+  <title>hexo搭建此博客和后续设置 | paste convergence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="paste convergence">
-<meta property="og:url" content="https://niaoshi119.github.io/archives/2022/09/index.html">
+  <meta name="description" content="搭建过程看这一个视频就够了，里面简洁地把用hexo搭建博客的所有主要步骤都讲了（比如安装node.js, npm, cnpm，设置git并发布，换主题等等），时长也短，没有拖泥带水。 日常用的也就这样几个命令，在博客文件夹下右键用git bash here进入输入就行 123456#因为没有系统学习过，以下中文动词用得肯定不准确hexo new &quot;新博客文章名&quot; #创建一篇新博">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建此博客和后续设置">
+<meta property="og:url" content="https://niaoshi119.github.io/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="paste convergence">
+<meta property="og:description" content="搭建过程看这一个视频就够了，里面简洁地把用hexo搭建博客的所有主要步骤都讲了（比如安装node.js, npm, cnpm，设置git并发布，换主题等等），时长也短，没有拖泥带水。 日常用的也就这样几个命令，在博客文件夹下右键用git bash here进入输入就行 123456#因为没有系统学习过，以下中文动词用得肯定不准确hexo new &quot;新博客文章名&quot; #创建一篇新博">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://niaoshi119.github.io/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/blogzj/source_posts/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png">
+<meta property="og:image" content="https://niaoshi119.github.io/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png">
+<meta property="article:published_time" content="2022-09-18T08:08:43.000Z">
+<meta property="article:modified_time" content="2022-09-18T08:33:12.111Z">
 <meta property="article:author" content="Zijian Zhang">
+<meta property="article:tag" content="技术总结">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://niaoshi119.github.io/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/blogzj/source_posts/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png">
   
     <link rel="alternative" href="/atom.xml" title="paste convergence" type="application/atom+xml">
   
@@ -150,36 +158,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo搭建此博客" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2022-09-18T08:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/">hexo搭建此博客和后续设置</a>
+    <h1 class="article-title" itemprop="name">
+      hexo搭建此博客和后续设置
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2022-09-18T08:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p>看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">这一个</a>视频就够了，里面简洁地把用hexo搭建博客的所有主要步骤都讲了（比如安装node.js, npm, cnpm，设置git并发布，换主题等等），时长也短，没有拖泥带水。</p>
+<p>日常用的也就这样几个命令，在博客文件夹下右键用git bash here进入输入就行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#因为没有系统学习过，以下中文动词用得肯定不准确</span></span><br><span class="line">hexo new <span class="string">&quot;新博客文章名&quot;</span> <span class="comment">#创建一篇新博文</span></span><br><span class="line">hexo clean <span class="comment">#清除之前的设置</span></span><br><span class="line">hexo g <span class="comment">#重新generate</span></span><br><span class="line">hexo s <span class="comment">#在本地部署</span></span><br><span class="line">hexo d <span class="comment">#推到github中去</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="博文插入图片"><a href="#博文插入图片" class="headerlink" title="博文插入图片"></a>博文插入图片</h3><p>在解决这一问题时一开始真的是让我感受到百度的难用，方案五花八门，却没有人讲清楚，试了好多都不行。后来谷歌了一些，看到了<a target="_blank" rel="noopener" href="https://hexo.io/docs/asset-folders.html">官方文档</a>，原来根本不用再npm安装莫名其妙的模块，以下几步就好了（其实还是因为有百度过的基础我才理解得快了）。</p>
+<p>在博客文件夹中的<code>_config.yml</code>把<code>post_asset_folder</code>打开，会在新建博文时同时生成一个同名文件夹，把图片放到这个同名文件夹中，然后在md文件中使用以下代码插入就行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br><span class="line">&#123;% asset_img &quot;spaced asset.jpg&quot; &quot;spaced title&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然其缺点是md文件中就无法正确显示图片了，似乎还有办法可以解决这个问题，还没有仔细看。</p>
+<p>另外，使用Typora可以比较方便地把图片复制到同名文件夹中，就是依次点击<strong>文件</strong>-&gt;<strong>偏好设置</strong>-&gt;<strong>图像</strong>，按以下内容设置，直接把图片粘贴到Typora中就同时复制到了同名文件夹中。</p>
+<p><img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/blogzj\source_posts\hexo搭建此博客\image-20220918163008751.png" alt="image-20220918163008751"></p>
+<img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png" class title="This is an example image">
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,57 +230,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://niaoshi119.github.io/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/17/%5B%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3%5D0916zuhui/" class="archive-article-date">
-  	<time datetime="2022-09-17T15:15:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/17/%5B%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3%5D0916zuhui/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">0916组会有感</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/17/%5B%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3%5D0916zuhui/">0916组会有感</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常感想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -264,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
