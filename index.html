@@ -180,7 +180,7 @@
 <p>在推导之前，我们假设已知如下几个条件：</p>
 <p>自由表面条件：<br>
 $$<br>
-p=0,\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\part \eta}{\part t}+\vec{v} · \nabla\eta=w\tag{1}， \mathrm{on\ }z=\eta(x,y,t)<br>
+p=0,\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \nabla\eta=w\tag{1}， \mathrm{on\ }z=\eta(x,y,t)<br>
 $$<br>
 这是说，表面的压强为0，水面随时间的变化，是这个局地的水随时间的变化，加上平流过来的变化；</p>
 <p>动量方程：<br>
@@ -197,40 +197,40 @@ $$<br>
 $$<br>
 \vec{u}·\nabla(z+h(x,y))=0,\  \mathrm{on\ }z=-h(x,y).\tag{4}<br>
 $$<br>
-就是说**（怎么解读？？？）**</p>
+就是说（怎么解读？？？）</p>
 <p>然后，我们首先考虑全部的质量守恒，对方程3进行垂直积分：<br>
 $$<br>
 0=\int_{-h}^{\eta}[\nabla·\vec{u}]\mathrm{d}z\<br>
-=\int_{-h}^{\eta}[\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z}]\mathrm dz,\<br>
+=\int_{-h}^{\eta}[\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}]\mathrm dz,<br>
 $$<br>
-其中第一项$\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz $又可写为**(应该是有这样的公式，找一下)<strong>：<br>
+其中第一项$\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz $ 又可写为(应该是有这样的公式，找一下)：</p>
+<p>$$<br>
+\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm{d}z =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|_{z=\eta}\frac{\partial \eta}{\partial x}+u|_{z=-h}\frac{\partial (-h)}{\partial x}<br>
+$$</p>
+<p>同理，第二项有：<br>
 $$<br>
-\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz =\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z=\eta}\frac{\part \eta}{\part x}+u|</em>{z=-h}\frac{\part (-h)}{\part x}<br>
-$$<br>
-同理，第二项有：<br>
-$$<br>
-\int_{-h}^{\eta}\frac{\part v}{\part y}\mathrm dz =\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z-v|<em>{z=\eta}\frac{\part \eta}{\part y}+v|</em>{z=-h}\frac{\part (-h)}{\part y}<br>
+\int_{-h}^{\eta}\frac{\partial v}{\partial y}\mathrm dz =\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|_{z=\eta}\frac{\partial \eta}{\partial y}+v|_{z=-h}\frac{\partial (-h)}{\partial y}<br>
 $$<br>
 同理，第三项应当也有：<br>
 $$<br>
-\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz =\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z-w|<em>{z=\eta}\frac{\part \eta}{\part z}+w|</em>{z=-h}\frac{\part (-h)}{\part z}<br>
+\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz =\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z-w|_{z=\eta}\frac{\partial \eta}{\partial z}+w|_{z=-h}\frac{\partial (-h)}{\partial z}<br>
 $$<br>
-但又由于$\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z=0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\part \eta}{\part z}=\frac{\part (-h)}{\part z}=-1$</strong>(为什么？)**，则：<br>
+但又由于$\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z=0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\partial \eta}{\partial z}=\frac{\partial (-h)}{\partial z}=-1$(为什么？)，则：<br>
 $$<br>
-\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz = +w|<em>{z=\eta}-w|</em>{z=-h}<br>
+\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz = +w|_{z=\eta}-w|_{z=-h}<br>
 $$<br>
 此外由于方程4可得，以上所有的z=-h的项都为0，则：<br>
 $$<br>
-\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz =\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z=\eta}\frac{\part \eta}{\part x}\ +\frac{\part}{\part y}\int</em>{-h}^{\eta}v\mathrm{d}z-v|<em>{z=\eta}\frac{\part \eta}{\part y}\+w|</em>{z=\eta}=0<br>
+\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|_{z=\eta}\frac{\partial \eta}{\partial x}\ +\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|_{z=\eta}\frac{\partial \eta}{\partial y}+w|_{z=\eta}=0<br>
 $$<br>
-由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\part \eta}{\part t}+\vec{v} · \Delta\eta=w$可得，在$z=\eta$：<br>
+由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \Delta\eta=w$可得，在$z=\eta$：<br>
 $$<br>
-\frac{\part \eta}{\part t}=w-\vec{v} · \nabla\eta\<br>
-=w-(u·\frac{\part\eta}{\part x}+v·\frac{\part\eta}{\part y})<br>
+\frac{\partial \eta}{\partial t}=w-\vec{v} · \nabla\eta\<br>
+=w-(u·\frac{\partial\eta}{\partial x}+v·\frac{\partial\eta}{\partial y})<br>
 $$<br>
 则上上式可写为：<br>
 $$<br>
-\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\part \eta}{\part t}=0 \tag {5}<br>
+\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\partial \eta}{\partial t}=0 \tag {5}<br>
 $$<br>
 下一步，我们进行长波近似，通过假设波长远远长于流体的深度。但是，我们不假设波动有小的振幅，因此非线性项不会被忽略。通过长波假设，(2)中的垂直加速度项可以被忽略，并且可以通过积分动量方程的垂直组分来推断流体静力压力。</p>
 
@@ -894,5 +894,20 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
