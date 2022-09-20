@@ -318,6 +318,9 @@ $$<br>
 <p>另外，使用Typora可以比较方便地把图片复制到同名文件夹中，就是依次点击<strong>文件</strong>-&gt;<strong>偏好设置</strong>-&gt;<strong>图像</strong>，按以下内容设置，直接把图片粘贴到Typora中就同时复制到了同名文件夹中。</p>
 <p><img src="D:%5Cblogzj%5Csource_posts%5Chexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%5Cimage-20220918163008751.png" alt="image-20220918163008751"></p>
 <img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png" class="" title="This is an example image">
+<h3 id="博文插入公式">博文插入公式</h3>
+<p>参照<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9b9c241146bc">这一个</a>教程的步骤进行设置，注意其中的第3步在Yilia主题设置时会报错，所以先不用管。</p>
+<p>全部流程走完之后，发现部分公式可以正确渲染，但是仍有未能渲染的，经排查发现一个问题是<code>\part</code>的规范写法是<code>\partial</code>，另一个问题是<code>_</code>在作为下标的标识符时应该为<code>\_</code>。修改后渲染一切正常。</p>
 
       
 
