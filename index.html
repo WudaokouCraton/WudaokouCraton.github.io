@@ -152,6 +152,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-浅水方程的推导" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/">浅水方程的推导</a>
+    </h1>
+  
+
+        
+        <a href="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" class="archive-article-date">
+  	<time datetime="2022-09-20T13:51:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。</p>
+<p><img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/blogzj\source_posts\浅水方程的推导\image-20220319145349999.png" alt="image-20220319145349999"></p>
+<img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png" class title="示意图">
+
+<h3 id="浅水方程的推导"><a href="#浅水方程的推导" class="headerlink" title="浅水方程的推导"></a>浅水方程的推导</h3><p>在推导之前，我们假设已知如下几个条件：</p>
+<p>自由表面条件：<br>$$<br>p&#x3D;0,\frac{\mathrm{D} \eta}{\mathrm{D} t}&#x3D;\frac{\part \eta}{\part t}+\vec{v} · \nabla\eta&#x3D;w\tag{1}， \mathrm{on\ }z&#x3D;\eta(x,y,t)<br>$$<br>这是说，表面的压强为0，水面随时间的变化，是这个局地的水随时间的变化，加上平流过来的变化；</p>
+<p>动量方程：<br>$$<br>\frac{\mathrm{D}\vec{u}}{\mathrm{D}t}+\frac{1}{\rho}\nabla p+g\hat{z}&#x3D;0\tag{2},<br>$$<br>就是牛顿第二定律，速度随时间的变化就是单位质量上的力。那么这里一共有两个力，一个压力梯度力$-\frac{1}{\rho}\nabla p$，一个重力$-g\hat{z}$；</p>
+<p>连续方程：<br>$$<br>\nabla · \vec{u}&#x3D;0\tag{3},<br>$$<br>速度的散度为0，说明进入一个格点的流体质量为0，也就是质量守恒了，密度不变化。</p>
+<p>底边界条件：<br>$$<br>\vec{u}·\nabla(z+h(x,y))&#x3D;0,\  \mathrm{on\ }z&#x3D;-h(x,y).\tag{4}<br>$$<br>就是说<strong>（怎么解读？？？）</strong></p>
+<p>然后，我们首先考虑全部的质量守恒，对方程3进行垂直积分：<br>$$<br>0&#x3D;\int_{-h}^{\eta}[\nabla·\vec{u}]\mathrm{d}z\<br>&#x3D;\int_{-h}^{\eta}[\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z}]\mathrm dz,\<br>$$<br>其中第一项$\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz $又可写为**(应该是有这样的公式，找一下)<strong>：<br>$$<br>\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz &#x3D;\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z&#x3D;\eta}\frac{\part \eta}{\part x}+u|</em>{z&#x3D;-h}\frac{\part (-h)}{\part x}<br>$$<br>同理，第二项有：<br>$$<br>\int_{-h}^{\eta}\frac{\part v}{\part y}\mathrm dz &#x3D;\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z-v|<em>{z&#x3D;\eta}\frac{\part \eta}{\part y}+v|</em>{z&#x3D;-h}\frac{\part (-h)}{\part y}<br>$$<br>同理，第三项应当也有：<br>$$<br>\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz &#x3D;\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z-w|<em>{z&#x3D;\eta}\frac{\part \eta}{\part z}+w|</em>{z&#x3D;-h}\frac{\part (-h)}{\part z}<br>$$<br>但又由于$\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z&#x3D;0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\part \eta}{\part z}&#x3D;\frac{\part (-h)}{\part z}&#x3D;-1$</strong>(为什么？)**，则：<br>$$<br>\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz &#x3D; +w|<em>{z&#x3D;\eta}-w|</em>{z&#x3D;-h}<br>$$<br>此外由于方程4可得，以上所有的z&#x3D;-h的项都为0，则：<br>$$<br>\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz &#x3D;\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z&#x3D;\eta}\frac{\part \eta}{\part x}\ +\frac{\part}{\part y}\int</em>{-h}^{\eta}v\mathrm{d}z-v|<em>{z&#x3D;\eta}\frac{\part \eta}{\part y}\+w|</em>{z&#x3D;\eta}&#x3D;0<br>$$<br>由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}&#x3D;\frac{\part \eta}{\part t}+\vec{v} · \Delta\eta&#x3D;w$可得，在$z&#x3D;\eta$：<br>$$<br>\frac{\part \eta}{\part t}&#x3D;w-\vec{v} · \nabla\eta\<br>&#x3D;w-(u·\frac{\part\eta}{\part x}+v·\frac{\part\eta}{\part y})<br>$$<br>则上上式可写为：<br>$$<br>\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\part \eta}{\part t}&#x3D;0 \tag {5}<br>$$<br>下一步，我们进行长波近似，通过假设波长远远长于流体的深度。但是，我们不假设波动有小的振幅，因此非线性项不会被忽略。通过长波假设，(2)中的垂直加速度项可以被忽略，并且可以通过积分动量方程的垂直组分来推断流体静力压力。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">动手学模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo搭建此博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,17 +255,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="搭建过程">搭建过程</h3>
-<p>看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">这一个</a>视频就够了，里面简洁地把用hexo搭建博客的所有主要步骤都讲了（比如安装node.js, npm, cnpm，设置git并发布，换主题等等），时长也短，没有拖泥带水。</p>
+        <h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><p>看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">这一个</a>视频就够了，里面简洁地把用hexo搭建博客的所有主要步骤都讲了（比如安装node.js, npm, cnpm，设置git并发布，换主题等等），时长也短，没有拖泥带水。</p>
 <p>日常用的也就这样几个命令，在博客文件夹下右键用git bash here进入输入就行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#因为没有系统学习过，以下中文动词用得肯定不准确</span></span><br><span class="line">hexo new <span class="string">&quot;新博客文章名&quot;</span> <span class="comment">#创建一篇新博文</span></span><br><span class="line">hexo clean <span class="comment">#清除之前的设置</span></span><br><span class="line">hexo g <span class="comment">#重新generate</span></span><br><span class="line">hexo s <span class="comment">#在本地部署</span></span><br><span class="line">hexo d <span class="comment">#推到github中去</span></span><br></pre></td></tr></table></figure>
-<h3 id="博文插入图片">博文插入图片</h3>
-<p>在解决这一问题时一开始真的是让我感受到百度的难用，方案五花八门，却没有人讲清楚，试了好多都不行。后来谷歌了一些，看到了<a target="_blank" rel="noopener" href="https://hexo.io/docs/asset-folders.html">官方文档</a>，原来根本不用再npm安装莫名其妙的模块，以下几步就好了（其实还是因为有百度过的基础我才理解得快了）。</p>
+
+<h3 id="博文插入图片"><a href="#博文插入图片" class="headerlink" title="博文插入图片"></a>博文插入图片</h3><p>在解决这一问题时一开始真的是让我感受到百度的难用，方案五花八门，却没有人讲清楚，试了好多都不行。后来谷歌了一些，看到了<a target="_blank" rel="noopener" href="https://hexo.io/docs/asset-folders.html">官方文档</a>，原来根本不用再npm安装莫名其妙的模块，以下几步就好了（其实还是因为有百度过的基础我才理解得快了）。</p>
 <p>在博客文件夹中的<code>_config.yml</code>把<code>post_asset_folder</code>打开，会在新建博文时同时生成一个同名文件夹，把图片放到这个同名文件夹中，然后在md文件中使用以下代码插入就行。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br><span class="line">&#123;% asset_img &quot;spaced asset.jpg&quot; &quot;spaced title&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
 <p>当然其缺点是md文件中就无法正确显示图片了，似乎还有办法可以解决这个问题，还没有仔细看。</p>
 <p>另外，使用Typora可以比较方便地把图片复制到同名文件夹中，就是依次点击<strong>文件</strong>-&gt;<strong>偏好设置</strong>-&gt;<strong>图像</strong>，按以下内容设置，直接把图片粘贴到Typora中就同时复制到了同名文件夹中。</p>
-<p><img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/D:%5Cblogzj%5Csource_posts%5Chexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%5Cimage-20220918163008751.png" alt="image-20220918163008751"></p>
+<p><img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/blogzj\source_posts\hexo搭建此博客\image-20220918163008751.png" alt="image-20220918163008751"></p>
 <img src="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/image-20220918163008751.png" class title="This is an example image">
 
       
@@ -257,16 +340,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="古老的木乃伊木化石">古老的木乃伊木化石</h3>
-<p>所谓木乃伊木化石就是半石半木的化石，还保留纤维素。大课题组内一位老师新招了一名博士后，做的大致是用现代树轮的研究方法研究新生代乃伊木化石，比如测氧同位素、碳同位素算定量的降水。组会还是挺成功的，因为该师兄的工作得到了热烈的讨论。我感觉对自己也还是有许多启发的，主要有以下几个方面：</p>
-<h4 id="1-地层年代">1. 地层年代</h4>
-<p>该师兄对他的木化石只能定年到世一级，最多只能知道是早中新世还是晚中新世的程度，这样的精度对于其想试图解决的古气候问题是远远不够的。毕竟即便都在中新世，全球气候状态也有很大的不同，比如中中新世暖期和转折等等。年代测不准，后续研究的意义就很有限了。</p>
-<h4 id="2-成岩作用对同位素的改造">2. 成岩作用对同位素的改造</h4>
-<p>与近代树轮研究不同，该师兄的材料是年代非常古老的化石，成岩作用的影响就决不可忽视。树干被埋藏在地下，要经过<strong>高温、高压的环境、地下水的改造和交代过程</strong>（有个学生提出，可以试着对树轮泡一年水，看看有没有变化，但问题是一年和几百万年差得实在太多了）等等，这每一项都可能会造成化学性质或者分馏特征的改变。如果想说明测得的碳氧同位素，必须要证明这些成岩过程不会对原始的同位素特征造成影响才行。此外，该师兄声称取出化石时还是湿的，但是过一段时间就干裂了，这个变干的过程也得到了大家的讨论，担心这一过程也可能导致同位素分馏。但是这一点可能确实不必担心，他本人和课题组做树轮的老师辩称，纤维素是一种化学性质很稳定的物质，而且日常测量时本来都要先把木头烘干再测。</p>
-<h4 id="3-指标指示意义">3. 指标指示意义</h4>
-<p>这也是所有做指标的学者绕不开的一个话题。该师兄用测得的碳同位素套用了现代的转换函数给出了一个定量重建的降水值。我在听的时候就感到很疑惑，前第四纪的大气环流和现在并不完全一致，<strong>水汽来源</strong>都不考虑直接套用现代公式是否合理？果然其他人也有类似的看法，他们还指出<strong>温度和CO2</strong>等等（等等是啥我忘了）对碳氧同位素分馏还是有很大的影响。涉及碳氧同位素的过程实在太复杂了，连石笋这么好的材料都不敢直接用同位素指示降水。此外，一位师兄还指出，木乃伊树轮师兄在对源区同位素做校正时，应当使用附近海域的表层δ值，而不是深海氧同位素的值。</p>
-<h4 id="总结">总结</h4>
-<p>虽然该师兄想通过某几个孤立的点最多一百多年的记录说明季风在构造尺度的变化的想法遭到破产，但是材料本身还是很新颖的很棒的，而且他的外导确实也发了很多高刊，毕竟是非常古老年代的天气尺度高分辨率的记录。感觉用来做极端降水也不是不行，虽然样本量小的话确实缺乏说服力。</p>
+        <h3 id="古老的木乃伊木化石"><a href="#古老的木乃伊木化石" class="headerlink" title="古老的木乃伊木化石"></a>古老的木乃伊木化石</h3><p>所谓木乃伊木化石就是半石半木的化石，还保留纤维素。大课题组内一位老师新招了一名博士后，做的大致是用现代树轮的研究方法研究新生代乃伊木化石，比如测氧同位素、碳同位素算定量的降水。组会还是挺成功的，因为该师兄的工作得到了热烈的讨论。我感觉对自己也还是有许多启发的，主要有以下几个方面：</p>
+<h4 id="1-地层年代"><a href="#1-地层年代" class="headerlink" title="1. 地层年代"></a>1. 地层年代</h4><p>该师兄对他的木化石只能定年到世一级，最多只能知道是早中新世还是晚中新世的程度，这样的精度对于其想试图解决的古气候问题是远远不够的。毕竟即便都在中新世，全球气候状态也有很大的不同，比如中中新世暖期和转折等等。年代测不准，后续研究的意义就很有限了。</p>
+<h4 id="2-成岩作用对同位素的改造"><a href="#2-成岩作用对同位素的改造" class="headerlink" title="2. 成岩作用对同位素的改造"></a>2. 成岩作用对同位素的改造</h4><p>与近代树轮研究不同，该师兄的材料是年代非常古老的化石，成岩作用的影响就决不可忽视。树干被埋藏在地下，要经过<strong>高温、高压的环境、地下水的改造和交代过程</strong>（有个学生提出，可以试着对树轮泡一年水，看看有没有变化，但问题是一年和几百万年差得实在太多了）等等，这每一项都可能会造成化学性质或者分馏特征的改变。如果想说明测得的碳氧同位素，必须要证明这些成岩过程不会对原始的同位素特征造成影响才行。此外，该师兄声称取出化石时还是湿的，但是过一段时间就干裂了，这个变干的过程也得到了大家的讨论，担心这一过程也可能导致同位素分馏。但是这一点可能确实不必担心，他本人和课题组做树轮的老师辩称，纤维素是一种化学性质很稳定的物质，而且日常测量时本来都要先把木头烘干再测。</p>
+<h4 id="3-指标指示意义"><a href="#3-指标指示意义" class="headerlink" title="3. 指标指示意义"></a>3. 指标指示意义</h4><p>这也是所有做指标的学者绕不开的一个话题。该师兄用测得的碳同位素套用了现代的转换函数给出了一个定量重建的降水值。我在听的时候就感到很疑惑，前第四纪的大气环流和现在并不完全一致，<strong>水汽来源</strong>都不考虑直接套用现代公式是否合理？果然其他人也有类似的看法，他们还指出<strong>温度和CO2</strong>等等（等等是啥我忘了）对碳氧同位素分馏还是有很大的影响。涉及碳氧同位素的过程实在太复杂了，连石笋这么好的材料都不敢直接用同位素指示降水。此外，一位师兄还指出，木乃伊树轮师兄在对源区同位素做校正时，应当使用附近海域的表层δ值，而不是深海氧同位素的值。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>虽然该师兄想通过某几个孤立的点最多一百多年的记录说明季风在构造尺度的变化的想法遭到破产，但是材料本身还是很新颖的很棒的，而且他的外导确实也发了很多高刊，毕竟是非常古老年代的天气尺度高分辨率的记录。感觉用来做极端降水也不是不行，虽然样本量小的话确实缺乏说服力。</p>
 <p>下一位师姐的工作以后再写。</p>
 
       
@@ -341,19 +419,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210208235240289-1748327098.png" alt></p>
-<h3 id="简介">简介</h3>
-<p>西风带可以驱动大洋表面环流，调制海-气热量、动量和碳的交换。最近的工作认为响应于人类强迫，当前的西风带向极地移动。上新世是个温暖的阶段，和未来气候类似。作者的结果表明，相比于随后的冰川时期，温暖的上新世的西风带更弱且更向极地。他们的结果基于风尘和生产力重建，指示了伴随着冰盖在北半球开始发展，中纬度北太平洋显著的风尘通量有显著的增长，尤其是和亚极地太平洋相比。如下图所示，1208点位在2.73Ma之前为低值，在其后开始有轨道变化的高低值旋回，而885/886点位则相对稳定，这说明纬度较低的1208点位在2.73Ma之后开始受到西风带影响<br>
-<img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210209231324962-232196028.png" alt><br>
-<img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210209232705742-1865952141.png" alt><br>
-在这一转变之后，风尘和生产力的改变大幅度依赖于冰期-间冰期旋回。他们推断西风带的移动主要由上新世-更新世的热梯度和冰量所驱动。通过联系其他风尘记录和气候模式的结果，他们发现西风带的改变是全球同步的。如果研究上新世气候有助于预测未来气候，那么可以期望两半球当今同时进行的西风带减弱和向极地将会继续进行。</p>
-<h3 id="几个疑问">几个疑问</h3>
-<p>因为没有细读文章，所以还是有挺多不理解的地方。</p>
+        <p><img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210208235240289-1748327098.png"></p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>西风带可以驱动大洋表面环流，调制海-气热量、动量和碳的交换。最近的工作认为响应于人类强迫，当前的西风带向极地移动。上新世是个温暖的阶段，和未来气候类似。作者的结果表明，相比于随后的冰川时期，温暖的上新世的西风带更弱且更向极地。他们的结果基于风尘和生产力重建，指示了伴随着冰盖在北半球开始发展，中纬度北太平洋显著的风尘通量有显著的增长，尤其是和亚极地太平洋相比。如下图所示，1208点位在2.73Ma之前为低值，在其后开始有轨道变化的高低值旋回，而885&#x2F;886点位则相对稳定，这说明纬度较低的1208点位在2.73Ma之后开始受到西风带影响<br><img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210209231324962-232196028.png"><br><img src="https://img2020.cnblogs.com/blog/2000242/202102/2000242-20210209232705742-1865952141.png"><br>在这一转变之后，风尘和生产力的改变大幅度依赖于冰期-间冰期旋回。他们推断西风带的移动主要由上新世-更新世的热梯度和冰量所驱动。通过联系其他风尘记录和气候模式的结果，他们发现西风带的改变是全球同步的。如果研究上新世气候有助于预测未来气候，那么可以期望两半球当今同时进行的西风带减弱和向极地将会继续进行。</p>
+<h3 id="几个疑问"><a href="#几个疑问" class="headerlink" title="几个疑问"></a>几个疑问</h3><p>因为没有细读文章，所以还是有挺多不理解的地方。</p>
 <ol>
-<li>为什么两个点位的成果就可以说明西风带的移动？1208确有变化，但是885/886变化并不大是否一定说明西风加强且向赤道移动？是否仅是1208这个纬度的西风增强？</li>
+<li>为什么两个点位的成果就可以说明西风带的移动？1208确有变化，但是885&#x2F;886变化并不大是否一定说明西风加强且向赤道移动？是否仅是1208这个纬度的西风增强？</li>
 <li>有没有可能是风尘来源区的物质变化造成的海洋中风尘增加？</li>
-<li>有没有对比同纬度的其他剖面？毕竟沉积过程是需要减速的，也许仅仅是因为西风开始在这个阶段减速到可以沉积大量风尘的速度？<br>
-如果细读的话要花费太多的时间的，看来还是得调整一下看文献的质量和节奏。</li>
+<li>有没有对比同纬度的其他剖面？毕竟沉积过程是需要减速的，也许仅仅是因为西风开始在这个阶段减速到可以沉积大量风尘的速度？<br>如果细读的话要花费太多的时间的，看来还是得调整一下看文献的质量和节奏。</li>
 </ol>
 
       
@@ -428,16 +500,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2021/02/07/[%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0]0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2/%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2%5C2000242-20210207224626751-1584352038.png" alt="img"></p>
+        <p><img src="/%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2%5C2000242-20210207224626751-1584352038.png" alt="img"></p>
 <img src="/2021/02/07/%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2/2000242-20210207224626751-1584352038.png" class title="This is an example image">
-<h3 id="简介">简介</h3>
-<p>利用西班牙东部马勒卡岛的潜水过生长石笋（POS）重建了6.5个百万年以来的西地中海的海平面变化。发现局地海平面在地中海盐度危机之前(6.54 ± 0.37 Ma)为高于现在33.3 ± 0.25 m，在该事件发生时(5.86 ± 0.60 Ma)为31.8 ± 0.25 m。 作者进行局地海平面对冰川均衡的校正、考虑到长期的构造抬升等因素，估计了全球平均海平面高度。全球平均海平面高度估计值为：更新世-上新世转折期（ 2.63 ± 0.11 Ma）是6.4 m (− 2.0–8.8 m)；中更新世初为− 1.1 m (− 5.6–2.4 m)；中更新世末为5 m (1.5–8.1 m)。</p>
-<h3 id="学黍鸡李姐">学黍鸡李姐</h3>
-<p>起了这么宏大的标题，其实也只有下表这样5个点的数据，未免有点夸大其词之嫌。其原理是 <em>As long as sea level remains at the same elevation for ~ 300 years or more, enough carbonate precipitation occurs within the tidal range at and few centimetres below the air–water interface to be sampled and dated. Therefore, the presence of POS horizons at different elevations precisely marks the positions of paleo-water tables and consequently their associated sea level positions.</em> 这种方法对全球海平面的估计比氧同位素的估计的轨道极大值还要大；在更新世之前在轨道极小值附近，在更新世之后在轨道极大值附近。<br>
-<img src="/2021/02/07/[%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0]0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2/D:%5Cblogzj%5Csource_posts%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2%5C2000242-20210207234823516-1104293153.png" alt="img"></p>
+
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>利用西班牙东部马勒卡岛的潜水过生长石笋（POS）重建了6.5个百万年以来的西地中海的海平面变化。发现局地海平面在地中海盐度危机之前(6.54 ± 0.37 Ma)为高于现在33.3 ± 0.25 m，在该事件发生时(5.86 ± 0.60 Ma)为31.8 ± 0.25 m。 作者进行局地海平面对冰川均衡的校正、考虑到长期的构造抬升等因素，估计了全球平均海平面高度。全球平均海平面高度估计值为：更新世-上新世转折期（ 2.63 ± 0.11 Ma）是6.4 m (− 2.0–8.8 m)；中更新世初为− 1.1 m (− 5.6–2.4 m)；中更新世末为5 m (1.5–8.1 m)。</p>
+<h3 id="学黍鸡李姐"><a href="#学黍鸡李姐" class="headerlink" title="学黍鸡李姐"></a>学黍鸡李姐</h3><p>起了这么宏大的标题，其实也只有下表这样5个点的数据，未免有点夸大其词之嫌。其原理是 <em>As long as sea level remains at the same elevation for ~ 300 years or more, enough carbonate precipitation occurs within the tidal range at and few centimetres below the air–water interface to be sampled and dated. Therefore, the presence of POS horizons at different elevations precisely marks the positions of paleo-water tables and consequently their associated sea level positions.</em> 这种方法对全球海平面的估计比氧同位素的估计的轨道极大值还要大；在更新世之前在轨道极小值附近，在更新世之后在轨道极大值附近。<br><img src="/2021/02/07/[%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0]0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2/blogzj\source_posts[文献笔记]0207-过去6.5Ma西地中海的海平面\2000242-20210207234823516-1104293153.png" alt="img"></p>
 <img src="/2021/02/07/%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0207-%E8%BF%87%E5%8E%BB6.5Ma%E8%A5%BF%E5%9C%B0%E4%B8%AD%E6%B5%B7%E7%9A%84%E6%B5%B7%E5%B9%B3%E9%9D%A2/2000242-20210207234823516-1104293153.png" class title="This is an example image">
-<h3 id="唱唱反调">唱唱反调</h3>
-<ol>
+
+<h3 id="唱唱反调"><a href="#唱唱反调" class="headerlink" title="唱唱反调"></a>唱唱反调</h3><ol>
 <li>即便是距离海岸线只有300m，其水力梯度真的可以忽略吗？这个地方的海平面是否会比真实的海平面低？</li>
 <li>冰盖模型中冰盖形状的不确定性？</li>
 <li>假设的由冰盖驱使的信号的百分比？</li>
@@ -595,11 +665,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日常感想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
+                <a href="javascript:void(0)" class="js-tag color1">动手学模式</a>
               </li>
             
             <div class="clearfix"></div>

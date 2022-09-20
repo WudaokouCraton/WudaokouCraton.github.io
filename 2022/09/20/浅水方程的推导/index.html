@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://WudaokouCraton.github.io">
-  <title>0916组会有感 | Wudaokou Craton</title>
+  <title>浅水方程的推导 | Wudaokou Craton</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="古老的木乃伊木化石所谓木乃伊木化石就是半石半木的化石，还保留纤维素。大课题组内一位老师新招了一名博士后，做的大致是用现代树轮的研究方法研究新生代乃伊木化石，比如测氧同位素、碳同位素算定量的降水。组会还是挺成功的，因为该师兄的工作得到了热烈的讨论。我感觉对自己也还是有许多启发的，主要有以下几个方面： 1. 地层年代该师兄对他的木化石只能定年到世一级，最多只能知道是早中新世还是晚中新世的程度，这样的精">
+  <meta name="description" content="写在前面虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。    浅水方程的推导在推导之前，我们假设已知">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0916组会有感">
-<meta property="og:url" content="https://wudaokoucraton.github.io/2022/09/17/[%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3]0916zuhui/index.html">
+<meta property="og:title" content="浅水方程的推导">
+<meta property="og:url" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/index.html">
 <meta property="og:site_name" content="Wudaokou Craton">
-<meta property="og:description" content="古老的木乃伊木化石所谓木乃伊木化石就是半石半木的化石，还保留纤维素。大课题组内一位老师新招了一名博士后，做的大致是用现代树轮的研究方法研究新生代乃伊木化石，比如测氧同位素、碳同位素算定量的降水。组会还是挺成功的，因为该师兄的工作得到了热烈的讨论。我感觉对自己也还是有许多启发的，主要有以下几个方面： 1. 地层年代该师兄对他的木化石只能定年到世一级，最多只能知道是早中新世还是晚中新世的程度，这样的精">
+<meta property="og:description" content="写在前面虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。    浅水方程的推导在推导之前，我们假设已知">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-17T15:15:37.000Z">
-<meta property="article:modified_time" content="2022-09-18T05:26:37.781Z">
+<meta property="og:image" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/blogzj/source_posts/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
+<meta property="og:image" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
+<meta property="article:published_time" content="2022-09-20T13:51:40.000Z">
+<meta property="article:modified_time" content="2022-09-20T13:53:45.748Z">
 <meta property="article:author" content="ZZ">
-<meta property="article:tag" content="日常感想">
+<meta property="article:tag" content="动手学模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/blogzj/source_posts/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
   
     <link rel="alternative" href="/atom.xml" title="Wudaokou Craton" type="application/atom+xml">
   
@@ -155,32 +158,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-[日常感想]0916zuhui" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-浅水方程的推导" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      0916组会有感
+      浅水方程的推导
     </h1>
   
 
         
-        <a href="/2022/09/17/%5B%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3%5D0916zuhui/" class="archive-article-date">
-  	<time datetime="2022-09-17T15:15:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-17</time>
+        <a href="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" class="archive-article-date">
+  	<time datetime="2022-09-20T13:51:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="古老的木乃伊木化石"><a href="#古老的木乃伊木化石" class="headerlink" title="古老的木乃伊木化石"></a>古老的木乃伊木化石</h3><p>所谓木乃伊木化石就是半石半木的化石，还保留纤维素。大课题组内一位老师新招了一名博士后，做的大致是用现代树轮的研究方法研究新生代乃伊木化石，比如测氧同位素、碳同位素算定量的降水。组会还是挺成功的，因为该师兄的工作得到了热烈的讨论。我感觉对自己也还是有许多启发的，主要有以下几个方面：</p>
-<h4 id="1-地层年代"><a href="#1-地层年代" class="headerlink" title="1. 地层年代"></a>1. 地层年代</h4><p>该师兄对他的木化石只能定年到世一级，最多只能知道是早中新世还是晚中新世的程度，这样的精度对于其想试图解决的古气候问题是远远不够的。毕竟即便都在中新世，全球气候状态也有很大的不同，比如中中新世暖期和转折等等。年代测不准，后续研究的意义就很有限了。</p>
-<h4 id="2-成岩作用对同位素的改造"><a href="#2-成岩作用对同位素的改造" class="headerlink" title="2. 成岩作用对同位素的改造"></a>2. 成岩作用对同位素的改造</h4><p>与近代树轮研究不同，该师兄的材料是年代非常古老的化石，成岩作用的影响就决不可忽视。树干被埋藏在地下，要经过<strong>高温、高压的环境、地下水的改造和交代过程</strong>（有个学生提出，可以试着对树轮泡一年水，看看有没有变化，但问题是一年和几百万年差得实在太多了）等等，这每一项都可能会造成化学性质或者分馏特征的改变。如果想说明测得的碳氧同位素，必须要证明这些成岩过程不会对原始的同位素特征造成影响才行。此外，该师兄声称取出化石时还是湿的，但是过一段时间就干裂了，这个变干的过程也得到了大家的讨论，担心这一过程也可能导致同位素分馏。但是这一点可能确实不必担心，他本人和课题组做树轮的老师辩称，纤维素是一种化学性质很稳定的物质，而且日常测量时本来都要先把木头烘干再测。</p>
-<h4 id="3-指标指示意义"><a href="#3-指标指示意义" class="headerlink" title="3. 指标指示意义"></a>3. 指标指示意义</h4><p>这也是所有做指标的学者绕不开的一个话题。该师兄用测得的碳同位素套用了现代的转换函数给出了一个定量重建的降水值。我在听的时候就感到很疑惑，前第四纪的大气环流和现在并不完全一致，<strong>水汽来源</strong>都不考虑直接套用现代公式是否合理？果然其他人也有类似的看法，他们还指出<strong>温度和CO2</strong>等等（等等是啥我忘了）对碳氧同位素分馏还是有很大的影响。涉及碳氧同位素的过程实在太复杂了，连石笋这么好的材料都不敢直接用同位素指示降水。此外，一位师兄还指出，木乃伊树轮师兄在对源区同位素做校正时，应当使用附近海域的表层δ值，而不是深海氧同位素的值。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>虽然该师兄想通过某几个孤立的点最多一百多年的记录说明季风在构造尺度的变化的想法遭到破产，但是材料本身还是很新颖的很棒的，而且他的外导确实也发了很多高刊，毕竟是非常古老年代的天气尺度高分辨率的记录。感觉用来做极端降水也不是不行，虽然样本量小的话确实缺乏说服力。</p>
-<p>下一位师姐的工作以后再写。</p>
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。</p>
+<p><img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/blogzj\source_posts\浅水方程的推导\image-20220319145349999.png" alt="image-20220319145349999"></p>
+<img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png" class title="示意图">
+
+<h3 id="浅水方程的推导"><a href="#浅水方程的推导" class="headerlink" title="浅水方程的推导"></a>浅水方程的推导</h3><p>在推导之前，我们假设已知如下几个条件：</p>
+<p>自由表面条件：<br>$$<br>p&#x3D;0,\frac{\mathrm{D} \eta}{\mathrm{D} t}&#x3D;\frac{\part \eta}{\part t}+\vec{v} · \nabla\eta&#x3D;w\tag{1}， \mathrm{on\ }z&#x3D;\eta(x,y,t)<br>$$<br>这是说，表面的压强为0，水面随时间的变化，是这个局地的水随时间的变化，加上平流过来的变化；</p>
+<p>动量方程：<br>$$<br>\frac{\mathrm{D}\vec{u}}{\mathrm{D}t}+\frac{1}{\rho}\nabla p+g\hat{z}&#x3D;0\tag{2},<br>$$<br>就是牛顿第二定律，速度随时间的变化就是单位质量上的力。那么这里一共有两个力，一个压力梯度力$-\frac{1}{\rho}\nabla p$，一个重力$-g\hat{z}$；</p>
+<p>连续方程：<br>$$<br>\nabla · \vec{u}&#x3D;0\tag{3},<br>$$<br>速度的散度为0，说明进入一个格点的流体质量为0，也就是质量守恒了，密度不变化。</p>
+<p>底边界条件：<br>$$<br>\vec{u}·\nabla(z+h(x,y))&#x3D;0,\  \mathrm{on\ }z&#x3D;-h(x,y).\tag{4}<br>$$<br>就是说<strong>（怎么解读？？？）</strong></p>
+<p>然后，我们首先考虑全部的质量守恒，对方程3进行垂直积分：<br>$$<br>0&#x3D;\int_{-h}^{\eta}[\nabla·\vec{u}]\mathrm{d}z\<br>&#x3D;\int_{-h}^{\eta}[\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z}]\mathrm dz,\<br>$$<br>其中第一项$\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz $又可写为**(应该是有这样的公式，找一下)<strong>：<br>$$<br>\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz &#x3D;\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z&#x3D;\eta}\frac{\part \eta}{\part x}+u|</em>{z&#x3D;-h}\frac{\part (-h)}{\part x}<br>$$<br>同理，第二项有：<br>$$<br>\int_{-h}^{\eta}\frac{\part v}{\part y}\mathrm dz &#x3D;\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z-v|<em>{z&#x3D;\eta}\frac{\part \eta}{\part y}+v|</em>{z&#x3D;-h}\frac{\part (-h)}{\part y}<br>$$<br>同理，第三项应当也有：<br>$$<br>\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz &#x3D;\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z-w|<em>{z&#x3D;\eta}\frac{\part \eta}{\part z}+w|</em>{z&#x3D;-h}\frac{\part (-h)}{\part z}<br>$$<br>但又由于$\frac{\part}{\part z}\int_{-h}^{\eta}w\mathrm{d}z&#x3D;0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\part \eta}{\part z}&#x3D;\frac{\part (-h)}{\part z}&#x3D;-1$</strong>(为什么？)**，则：<br>$$<br>\int_{-h}^{\eta}\frac{\part w}{\part z}\mathrm dz &#x3D; +w|<em>{z&#x3D;\eta}-w|</em>{z&#x3D;-h}<br>$$<br>此外由于方程4可得，以上所有的z&#x3D;-h的项都为0，则：<br>$$<br>\int_{-h}^{\eta}\frac{\part u}{\part x}\mathrm dz &#x3D;\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z-u|<em>{z&#x3D;\eta}\frac{\part \eta}{\part x}\ +\frac{\part}{\part y}\int</em>{-h}^{\eta}v\mathrm{d}z-v|<em>{z&#x3D;\eta}\frac{\part \eta}{\part y}\+w|</em>{z&#x3D;\eta}&#x3D;0<br>$$<br>由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}&#x3D;\frac{\part \eta}{\part t}+\vec{v} · \Delta\eta&#x3D;w$可得，在$z&#x3D;\eta$：<br>$$<br>\frac{\part \eta}{\part t}&#x3D;w-\vec{v} · \nabla\eta\<br>&#x3D;w-(u·\frac{\part\eta}{\part x}+v·\frac{\part\eta}{\part y})<br>$$<br>则上上式可写为：<br>$$<br>\frac{\part}{\part x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\part}{\part y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\part \eta}{\part t}&#x3D;0 \tag {5}<br>$$<br>下一步，我们进行长波近似，通过假设波长远远长于流体的深度。但是，我们不假设波动有小的振幅，因此非线性项不会被忽略。通过长波假设，(2)中的垂直加速度项可以被忽略，并且可以通过积分动量方程的垂直组分来推断流体静力压力。</p>
 
       
 
@@ -215,7 +222,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常感想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">动手学模式</a>
         		</li>
       		
 		</ul>
@@ -271,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wudaokoucraton.github.io/2022/09/17/[%E6%97%A5%E5%B8%B8%E6%84%9F%E6%83%B3]0916zuhui/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +292,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo搭建此博客和后续设置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/02/09/%5B%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%5D0209-%E4%B8%8A%E6%96%B0%E4%B8%96%E6%9A%96%E6%9C%9F%E5%90%91%E6%9E%81%E4%B8%94%E6%9B%B4%E5%BC%B1%E7%9A%84%E8%A5%BF%E9%A3%8E%E5%B8%A6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">20210207-上新世暖期向极且更弱的西风带</div>
+    <a href="/2022/09/18/hexo%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo搭建此博客和后续设置</div>
       <i class="icon-circle-right"></i>
     </a>
   
