@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="Wudaokou Craton">
 <meta property="og:description" content="写在前面 虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。   浅水方程的推导 在推导之前，我们假设已">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://wudaokoucraton.github.io/.io//D:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
-<meta property="og:image" content="https://wudaokoucraton.github.io/.io//09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
+<meta property="og:image" content="d:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
+<meta property="og:image" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
 <meta property="article:published_time" content="2022-09-20T13:51:40.000Z">
 <meta property="article:modified_time" content="2022-09-20T14:04:22.818Z">
 <meta property="article:author" content="ZZ">
 <meta property="article:tag" content="动手学模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wudaokoucraton.github.io/.io//D:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
+<meta name="twitter:image" content="d:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
   
     <link rel="alternative" href="/atom.xml" title="Wudaokou Craton" type="application/atom+xml">
   
@@ -180,8 +180,8 @@
       
         <h3 id="写在前面">写在前面</h3>
 <p>虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。</p>
-<p><img src="/.io//D:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png" alt="image-20220319145349999"></p>
-<img src="/.io//09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png" class title="示意图">
+<p><img src="D:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png" alt="image-20220319145349999"></p>
+<img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png" class="" title="示意图">
 <h3 id="浅水方程的推导">浅水方程的推导</h3>
 <p>在推导之前，我们假设已知如下几个条件：</p>
 <p>自由表面条件：<br>
