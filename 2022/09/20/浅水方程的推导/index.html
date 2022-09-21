@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="https://WudaokouCraton.github.io">
   <title>浅水方程的推导 | Wudaokou Craton</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写在前面 虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。   浅水方程的推导 在推导之前，我们假设已">
+  <meta name="description" content="写在前面虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。   浅水方程的推导在推导之前，我们假设已知如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅水方程的推导">
 <meta property="og:url" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/index.html">
 <meta property="og:site_name" content="Wudaokou Craton">
-<meta property="og:description" content="写在前面 虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。   浅水方程的推导 在推导之前，我们假设已">
+<meta property="og:description" content="写在前面虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。   浅水方程的推导在推导之前，我们假设已知如">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="d:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
+<meta property="og:image" content="d:\blogzj\source\_posts\%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC\image-20220319145349999.png">
 <meta property="og:image" content="https://wudaokoucraton.github.io/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png">
 <meta property="article:published_time" content="2022-09-20T13:51:40.000Z">
 <meta property="article:modified_time" content="2022-09-20T16:04:16.290Z">
 <meta property="article:author" content="ZZ">
 <meta property="article:tag" content="动手学模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png">
+<meta name="twitter:image" content="d:\blogzj\source\_posts\%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC\image-20220319145349999.png">
   
     <link rel="alternative" href="/atom.xml" title="Wudaokou Craton" type="application/atom+xml">
   
@@ -51,7 +51,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/touxiang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -109,7 +109,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/touxiang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -178,67 +178,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="写在前面">写在前面</h3>
-<p>虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。</p>
-<p><img src="D:%5Cblogzj%5Csource_posts%5C%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC%5Cimage-20220319145349999.png" alt="image-20220319145349999"></p>
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>虽然我是气候模拟方向的，但是对于之前的我来讲，气候模式几乎是一个黑箱子。我本科是地质专业的，虽然也学了一些地球物理的课程，但毕竟没有出身于大气或者物理海洋专业的人对流体地球物理的理解得深。我写下这些笔记，是为了尽快理解并记忆我缺失的一些必备知识。因此内容都是点到而止，达到我可以理解的程度即可，且没有对严谨性的要求，内容有纰漏、错误是在所难免的。</p>
+<p><img src="D:\blogzj\source\_posts\浅水方程的推导\image-20220319145349999.png" alt="image-20220319145349999"></p>
 <img src="/2022/09/20/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E7%9A%84%E6%8E%A8%E5%AF%BC/image-20220319145349999.png" class="" title="示意图">
-<h3 id="浅水方程的推导">浅水方程的推导</h3>
-<p>在推导之前，我们假设已知如下几个条件：</p>
-<p>自由表面条件：<br>
-$$<br>
-p=0,\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \nabla\eta=w\tag{1}， \mathrm{on\ }z=\eta(x,y,t)<br>
-$$<br>
-这是说，表面的压强为0，水面随时间的变化，是这个局地的水随时间的变化，加上平流过来的变化；</p>
-<p>动量方程：<br>
-$$<br>
-\frac{\mathrm{D}\vec{u}}{\mathrm{D}t}+\frac{1}{\rho}\nabla p+g\hat{z}=0\tag{2},<br>
-$$<br>
-就是牛顿第二定律，速度随时间的变化就是单位质量上的力。那么这里一共有两个力，一个压力梯度力$-\frac{1}{\rho}\nabla p$，一个重力$-g\hat{z}$；</p>
-<p>连续方程：<br>
-$$<br>
-\nabla · \vec{u}=0\tag{3},<br>
-$$<br>
-速度的散度为0，说明进入一个格点的流体质量为0，也就是质量守恒了，密度不变化。</p>
-<p>底边界条件：<br>
-$$<br>
-\vec{u}·\nabla(z+h(x,y))=0,\  \mathrm{on\ }z=-h(x,y).\tag{4}<br>
-$$<br>
-就是说（怎么解读？？？）</p>
-<p>然后，我们首先考虑全部的质量守恒，对方程3进行垂直积分：<br>
-$$<br>
-0=\int_{-h}^{\eta}[\nabla·\vec{u}]\mathrm{d}z\<br>
-=\int_{-h}^{\eta}[\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}]\mathrm dz,<br>
-$$<br>
-其中第一项$\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz $ 又可写为(应该是有这样的公式，找一下)：</p>
-<p>$$<br>
-\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm{d}z =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|_{z=\eta}\frac{\partial \eta}{\partial x}+u|_{z=-h}\frac{\partial (-h)}{\partial x}<br>
-$$</p>
-<p>同理，第二项有：<br>
-$$<br>
-\int_{-h}^{\eta}\frac{\partial v}{\partial y}\mathrm dz =\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|_{z=\eta}\frac{\partial \eta}{\partial y}+v|_{z=-h}\frac{\partial (-h)}{\partial y}<br>
-$$<br>
-同理，第三项应当也有：<br>
-$$<br>
-\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz =\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z-w|_{z=\eta}\frac{\partial \eta}{\partial z}+w|_{z=-h}\frac{\partial (-h)}{\partial z}<br>
-$$<br>
-但又由于$\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z=0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\partial \eta}{\partial z}=\frac{\partial (-h)}{\partial z}=-1$(为什么？)，则：<br>
-$$<br>
-\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz = +w|_{z=\eta}-w|_{z=-h}<br>
-$$<br>
-此外由于方程4可得，以上所有的z=-h的项都为0，则：<br>
-$$<br>
-\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|_{z=\eta}\frac{\partial \eta}{\partial x}\ +\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|_{z=\eta}\frac{\partial \eta}{\partial y}+w|_{z=\eta}=0<br>
-$$<br>
-由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \Delta\eta=w$可得，在$z=\eta$：<br>
-$$<br>
-\frac{\partial \eta}{\partial t}=w-\vec{v} · \nabla\eta\<br>
-=w-(u·\frac{\partial\eta}{\partial x}+v·\frac{\partial\eta}{\partial y})<br>
-$$<br>
-则上上式可写为：<br>
-$$<br>
-\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\partial \eta}{\partial t}=0 \tag {5}<br>
-$$<br>
-下一步，我们进行长波近似，通过假设波长远远长于流体的深度。但是，我们不假设波动有小的振幅，因此非线性项不会被忽略。通过长波假设，(2)中的垂直加速度项可以被忽略，并且可以通过积分动量方程的垂直组分来推断流体静力压力。</p>
+<h3 id="浅水方程的推导"><a href="#浅水方程的推导" class="headerlink" title="浅水方程的推导"></a>浅水方程的推导</h3><p>在推导之前，我们假设已知如下几个条件：</p>
+<p>自由表面条件：</p>
+<script type="math/tex; mode=display">
+p=0,\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \nabla\eta=w\tag{1}， \mathrm{on\ }z=\eta(x,y,t)</script><p>这是说，表面的压强为0，水面随时间的变化，是这个局地的水随时间的变化，加上平流过来的变化；</p>
+<p>动量方程：</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{D}\vec{u}}{\mathrm{D}t}+\frac{1}{\rho}\nabla p+g\hat{z}=0\tag{2},</script><p>就是牛顿第二定律，速度随时间的变化就是单位质量上的力。那么这里一共有两个力，一个压力梯度力$-\frac{1}{\rho}\nabla p$，一个重力$-g\hat{z}$；</p>
+<p>连续方程：</p>
+<script type="math/tex; mode=display">
+\nabla · \vec{u}=0\tag{3},</script><p>速度的散度为0，说明进入一个格点的流体质量为0，也就是质量守恒了，密度不变化。</p>
+<p>底边界条件：</p>
+<script type="math/tex; mode=display">
+\vec{u}·\nabla(z+h(x,y))=0,\  \mathrm{on\ }z=-h(x,y).\tag{4}</script><p>就是说（怎么解读？？？）</p>
+<p>然后，我们首先考虑全部的质量守恒，对方程3进行垂直积分：</p>
+<script type="math/tex; mode=display">
+0=\int_{-h}^{\eta}[\nabla·\vec{u}]\mathrm{d}z\\
+=\int_{-h}^{\eta}[\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}]\mathrm dz,</script><p>其中第一项$\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz $ 又可写为(应该是有这样的公式，找一下)：</p>
+<script type="math/tex; mode=display">
+\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm{d}z =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|_{z=\eta}\frac{\partial \eta}{\partial x}+u|\_{z=-h}\frac{\partial (-h)}{\partial x}</script><p>同理，第二项有：</p>
+<script type="math/tex; mode=display">
+\int_{-h}^{\eta}\frac{\partial v}{\partial y}\mathrm dz =\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|\_{z=\eta}\frac{\partial \eta}{\partial y}+v|\_{z=-h}\frac{\partial (-h)}{\partial y}</script><p>同理，第三项应当也有：</p>
+<script type="math/tex; mode=display">
+\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz =\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z-w|\_{z=\eta}\frac{\partial \eta}{\partial z}+w|\_{z=-h}\frac{\partial (-h)}{\partial z}</script><p>但又由于$\frac{\partial}{\partial z}\int_{-h}^{\eta}w\mathrm{d}z=0$（先垂直积分，在z方向是一定值，再垂直求导，则为0？）和$\frac{\partial \eta}{\partial z}=\frac{\partial (-h)}{\partial z}=-1$(为什么？)，则：</p>
+<script type="math/tex; mode=display">
+\int_{-h}^{\eta}\frac{\partial w}{\partial z}\mathrm dz = +w|\_{z=\eta}-w|\_{z=-h}</script><p>此外由于方程4可得，以上所有的z=-h的项都为0，则：</p>
+<script type="math/tex; mode=display">
+\int_{-h}^{\eta}\frac{\partial u}{\partial x}\mathrm dz =\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z-u|\_{z=\eta}\frac{\partial \eta}{\partial x}\\ +\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z-v|\_{z=\eta}\frac{\partial \eta}{\partial y}+w|\_{z=\eta}=0</script><p>由方程1，$\frac{\mathrm{D} \eta}{\mathrm{D} t}=\frac{\partial \eta}{\partial t}+\vec{v} · \Delta\eta=w$可得，在$z=\eta$：</p>
+<script type="math/tex; mode=display">
+\frac{\partial \eta}{\partial t}=w-\vec{v} · \nabla\eta\\
+=w-(u·\frac{\partial\eta}{\partial x}+v·\frac{\partial\eta}{\partial y})</script><p>则上上式可写为：</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial x}\int_{-h}^{\eta}u\mathrm{d}z+\frac{\partial}{\partial y}\int_{-h}^{\eta}v\mathrm{d}z+\frac{\partial \eta}{\partial t}=0 \tag {5}</script><p>下一步，我们进行长波近似，通过假设波长远远长于流体的深度。但是，我们不假设波动有小的振幅，因此非线性项不会被忽略。通过长波假设，(2)中的垂直加速度项可以被忽略，并且可以通过积分动量方程的垂直组分来推断流体静力压力。</p>
 
       
 
